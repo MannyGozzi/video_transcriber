@@ -181,7 +181,7 @@ async function processDirectory(inputDir: string, options = {}): Promise<void> {
     
     // Create output directory with the same name as the input directory
     const dirName = path.basename(inputDir);
-    const outputDir = path.join(process.cwd(), `${dirName}_transcriptions`);
+    const outputDir = path.join(process.cwd(), 'transcripts', `${dirName}_transcriptions`);
     
     if (!fs.existsSync(outputDir)) {
         console.log(`Creating output directory: ${outputDir}`);
